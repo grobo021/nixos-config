@@ -15,6 +15,7 @@
 	bind = [
           "$mod, Q, exec, $terminal"
 	  "$mod, B, exec, $browser"
+	  ", Print, exec, grimblast copy area"
 	];
 
 	monitor = [

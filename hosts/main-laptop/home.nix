@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -11,10 +11,9 @@
 
   home.stateVersion = "24.05"; # DO NOT CHANGE UNLESS YOU ARE VERY CAREFUL
 
-  home.packages = with pkgs; [
-    hello
-    grim
-    slurp
+  home.packages = [
+    pkgs.hello
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
   home.sessionVariables = {

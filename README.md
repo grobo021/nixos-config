@@ -2,9 +2,8 @@
 Note: Only cross when fully configured, i.e. installed, themed, and other stuff like hotkeys (if any)
 
 - [ ] System Customisation
-    - [ ] Colors (Stylix, GTK/Qt, etc.)
     - [ ] Hyprland
-        - [ ] Screenshots
+        - [x] Screenshots
     - [ ] Impermanence
     - [ ] Backups (very extremely ultra important yes)
     - [ ] Fish
@@ -37,6 +36,7 @@ Note: Only cross when fully configured, i.e. installed, themed, and other stuff 
 - [ ] Other Things
     - [ ] Steam
     - [ ] Minecraft (Prism Launcher)
+    - [ ] Discord
     - [ ] MPV
     - [ ] LibreOffice
     - [x] Pass (The Password Manager)
