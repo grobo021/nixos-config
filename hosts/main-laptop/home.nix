@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/home-manager/hyprland.nix
+    ../../modules/home-manager/git.nix
   ];
 
   home.username = "rishab";
