@@ -11,8 +11,10 @@
 
   home.stateVersion = "24.05"; # DO NOT CHANGE UNLESS YOU ARE VERY CAREFUL
 
-  home.packages = [
-    pkgs.hello
+  home.packages = with pkgs; [
+    hello
+    grim
+    slurp
   ];
 
   home.sessionVariables = {
