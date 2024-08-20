@@ -11,6 +11,8 @@ in
       ../../modules/nixos/main-user.nix
       ../../modules/nixos/secrets-manager.nix
       inputs.home-manager.nixosModules.default
+      inputs.stylix.nixosModules.stylix
+      inputs.nixvim.nixosModules.nixvim
       inputs.sops-nix.nixosModules.sops
     ];
 

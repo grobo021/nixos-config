@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,9 +46,6 @@
           specialArgs = { inherit inputs; };
           modules = [ 
             ./hosts/main-laptop/configuration.nix
-            inputs.home-manager.nixosModules.default
-	    inputs.stylix.nixosModules.stylix
-	    inputs.nixvim.nixosModules.nixvim
           ];
         };
       };
