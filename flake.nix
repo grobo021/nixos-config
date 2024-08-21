@@ -2,7 +2,9 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,7 +40,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import inputs.nixpkgs { inherit system; config.allowUnfree = true; };
     in
     {
       nixosConfigurations = {
@@ -46,6 +48,10 @@
           specialArgs = { inherit inputs; };
           modules = [ 
             ./hosts/main-laptop/configuration.nix
+	    inputs.home-manager.nixosModules.home-manager {
+	      home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+	    }
           ];
         };
       };

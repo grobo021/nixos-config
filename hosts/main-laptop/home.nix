@@ -13,6 +13,8 @@
 
   home.packages = [
     pkgs.hello
+    pkgs.discord
+    pkgs.mako
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 

@@ -178,15 +178,14 @@ in
 
   # Home Manager
   home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
       "${userName}" = import ./home.nix;
     };
     backupFileExtension = "backup";
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Enable GnuPG and Gnome Keyring
   services.gnome.gnome-keyring.enable = true;
