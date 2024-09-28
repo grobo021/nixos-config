@@ -16,10 +16,18 @@
     pkgs.discord
     pkgs.mako
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    pkgs.mullvad-browser
+    pkgs.wofi
+    pkgs.wofi-pass
+    pkgs.wofi-emoji
+    pkgs.kdePackages.dolphin
+    pkgs.playerctl
+    pkgs.brightnessctl
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    NIXOS_OZONE_WL = "1";
   };
 
   # Firefox

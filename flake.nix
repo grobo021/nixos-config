@@ -45,13 +45,11 @@
     {
       nixosConfigurations = {
 	main-laptop = nixpkgs.lib.nixosSystem {
+	  inherit pkgs;
           specialArgs = { inherit inputs; };
           modules = [ 
             ./hosts/main-laptop/configuration.nix
-	    inputs.home-manager.nixosModules.home-manager {
-	      home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-	    }
+	    inputs.home-manager.nixosModules.home-manager
           ];
         };
       };
