@@ -12,14 +12,14 @@
 	"$terminal" = "kitty";
 	"$browser" = "mullvad-browser";
 	"$menu" = "wofi --show drun";
-	"$filemanager" = "dolphin";
+	# "$filemanager" = "dolphin";
 
 	bind = [
 	  # Common Keybinds
           "$mod, Q, exec, $terminal"
-	  "$mod, C, exec, killactive, "
+	  "$mod, C, killactive, "
 	  "$mod, M, exit, "
-          "$mod, E, exec, $fileManager"
+          # "$mod, E, exec, $fileManager"
 	  "$mod, V, togglefloating, "
 	  "$mod, B, exec, $browser"
 	  ", Print, exec, grimblast copy area"
@@ -34,10 +34,6 @@
 	  # Scroll workspaces with $mod + scroll
 	  "$mod, mouse_down, workspace, e+1"
 	  "$mod, mouse_up, workspace, e-1"
-
-	  # Move/Resize windows with $mod + LMB/RMD and dragging
-	  "$mod, mouse:272, movewindow"
-	  "$mod, mouse:273, resizewindow"
 	] ++ (
 	  # Workspaces
           builtins.concatLists(builtins.genList (i:
@@ -49,6 +45,12 @@
             ) 9
 	  )
         );
+
+        # Move/resize windows with mainMod + LMB/RMB and dragging
+	bindm = [
+	  "$mod, mouse:272, movewindow"
+	  "$mod, mouse:273, resizewindow"
+	];
 
 	# Laptop multimedia keys for volume and LCD brightness
 	bindel = [

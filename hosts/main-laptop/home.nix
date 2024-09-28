@@ -20,7 +20,6 @@
     pkgs.wofi
     pkgs.wofi-pass
     pkgs.wofi-emoji
-    pkgs.kdePackages.dolphin
     pkgs.playerctl
     pkgs.brightnessctl
   ];
