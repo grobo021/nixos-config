@@ -187,6 +187,9 @@ in
     backupFileExtension = "backup";
   };
 
+  # Enable waydroid
+  virtualisation.waydroid.enable = true;
+
   # Enable GnuPG and Gnome Keyring
   services.gnome.gnome-keyring.enable = true;
   programs.mtr.enable = true;

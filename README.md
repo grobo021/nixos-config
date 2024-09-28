@@ -17,7 +17,7 @@ Note: Only cross when fully configured, i.e. installed, themed, and other stuff 
     - [ ] LF
 
 - [ ] Browser Config
-    - [ ] Firefox
+    - [ ] Mullvad Browser
     - [ ] Ungoogled Chromium
 
 - [ ] Editors

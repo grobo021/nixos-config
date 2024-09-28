@@ -22,6 +22,7 @@
     pkgs.wofi-emoji
     pkgs.playerctl
     pkgs.brightnessctl
+    pkgs.telegram-desktop
   ];
 
   home.sessionVariables = {
