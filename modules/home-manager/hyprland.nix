@@ -28,16 +28,16 @@
 	  "$mod, J, togglesplit, "
 
 	  # Scratchpad/Special Workspace
-	  "$mod, S, toggelspecialworkspace, magic"
+	  "$mod, S, togglespecialworkspace, magic"
 	  "$mod SHIFT, S, movetoworkspace, special:magic"
 
 	  # Scroll workspaces with $mod + scroll
 	  "$mod, mouse_down, workspace, e+1"
-	  "$mod, mouse_up, workspace e-1"
+	  "$mod, mouse_up, workspace, e-1"
 
 	  # Move/Resize windows with $mod + LMB/RMD and dragging
-	  "$mod, mouse:272, moveWindow"
-	  "$mod, mouse:273, resizeWindow"
+	  "$mod, mouse:272, movewindow"
+	  "$mod, mouse:273, resizewindow"
 	] ++ (
 	  # Workspaces
           builtins.concatLists(builtins.genList (i:
