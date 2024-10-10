@@ -10,7 +10,7 @@
       settings = {
         "$mod" = "SUPER";
 	"$terminal" = "kitty";
-	"$browser" = "mullvad-browser";
+	"$browser" = "firefox";
 	"$menu" = "wofi --show drun";
 	# "$filemanager" = "dolphin";
 

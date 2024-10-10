@@ -11,23 +11,25 @@
 
   home.stateVersion = "24.05"; # DO NOT CHANGE UNLESS YOU ARE VERY CAREFUL
 
-  home.packages = [
-    pkgs.hello
-    pkgs.discord
-    pkgs.mako
+  home.packages = with pkgs; [
+    hello
+    vesktop
+    mako
+    wofi
+    wofi-pass
+    wofi-emoji
+    playerctl
+    brightnessctl
+    telegram-desktop
+    protonup
+  ] ++ [
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    pkgs.mullvad-browser
-    pkgs.wofi
-    pkgs.wofi-pass
-    pkgs.wofi-emoji
-    pkgs.playerctl
-    pkgs.brightnessctl
-    pkgs.telegram-desktop
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   # Firefox
